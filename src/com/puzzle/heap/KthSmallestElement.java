@@ -13,7 +13,7 @@ public class KthSmallestElement {
 
     public static void main(String[] args) {
         int[] a={7,3,9,10,2,33,17,4};
-        System.out.println("Result is "+kSmallElement(a,9));
+        System.out.println("Result is "+kSmallElement(a,4));
     }
 
     private static Integer kSmallElement(int[] a, int k) {
