@@ -15,7 +15,7 @@ import java.util.PriorityQueue;
 public class PrintKMostFrequentNumbers {
 
     public static void main(String[] args) {
-        int[] arr = {3, 1, 4, 4, 5, 2, 6, 1};
+        int[] arr = {3, 1, 4, 4, 5, 2, 6, 1,1,1,1};
         int n = arr.length;
         int k = 2;
         printNMostFrequentNumber(arr, n, k);
@@ -24,11 +24,11 @@ public class PrintKMostFrequentNumbers {
     private static void printNMostFrequentNumber(int[] arr, int n, int k) {
         Map<Integer, Integer> mp = new HashMap<>();
         for (int i = 0; i < n; i++) {
-            mp.put(arr[i], mp.getOrDefault(arr[i] + 1, 0));
+            mp.put(arr[i], mp.getOrDefault(arr[i],0)+1);
         }
         PriorityQueue<Map.Entry<Integer, Integer>> queue = new PriorityQueue<>((a, b) ->
                 a.getValue().equals(b.getValue()) ? Integer.compare(a.getKey(), b.getKey()) :
-                        Integer.compare(a.getKey(), b.getKey())
+                        Integer.compare(b.getValue(), a.getValue())
         );
 
         for(Map.Entry<Integer,Integer> entry:mp.entrySet()){
