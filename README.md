@@ -10,8 +10,8 @@ Dynamic Programming Topics
 07. Target Sum (Leetcode)
 08. Count the number of subset with given difference
 09. Rod Cutting Problem
-10. Coin Change I
-11. Coin Change II
+10. Coin change problem: Maximum number of ways
+11. Coin change problem: Minimum number of coins
 12. Maximum Ribbon Cut
 13. Large Common Substring
 14. Print LCS
