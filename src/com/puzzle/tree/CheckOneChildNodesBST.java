@@ -1,5 +1,15 @@
 package com.puzzle.tree;
 
+/**
+ * Date 06/01/2020
+ * @author gauravenrich
+ * Checks if each internal node of BST has only one child without actually building the tree. Runs in O(n) time.
+ *
+ * check if all elements in the sub-array from [i+1 to end] of the array
+ * are less than current element - preorder[i]. If not, all these elements should
+ * be greater than the current element.
+ */
+
 public class CheckOneChildNodesBST {
     public static void main(String[] args){
 
