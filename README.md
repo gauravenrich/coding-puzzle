@@ -59,3 +59,6 @@ Tree Topics
 18. Print top view of a binary tree
 19. Print top view of a binary tree using level order traversal
 20. Print bottom view of a binary tree
+21. Print bottom view of a binary tree using level order traversal
+22. Vertical Order traversal
+23. Remove the nodes of binary search tree which are outside the given range
