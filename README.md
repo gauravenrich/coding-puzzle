@@ -62,3 +62,4 @@ Tree Topics
 21. Print bottom view of a binary tree using level order traversal
 22. Vertical Order traversal
 23. Remove the nodes of binary search tree which are outside the given range
+24. Remove all the half nodes from a given binary tree
