@@ -1,4 +1,4 @@
-package com.puzzle.graph.common;
+package com.puzzle.graph.common.adjmatrix;
 
 /**
  *  Date 30/01/2020

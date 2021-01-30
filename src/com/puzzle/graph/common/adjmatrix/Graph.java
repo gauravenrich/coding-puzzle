@@ -1,4 +1,4 @@
-package com.puzzle.graph.common;
+package com.puzzle.graph.common.adjmatrix;
 
 import java.util.LinkedList;
 import java.util.Queue;

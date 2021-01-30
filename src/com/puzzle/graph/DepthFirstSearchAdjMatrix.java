@@ -1,6 +1,6 @@
 package com.puzzle.graph;
 
-import com.puzzle.graph.common.Graph;
+import com.puzzle.graph.common.adjmatrix.Graph;
 
 /**
  *  Date 30/01/2020
