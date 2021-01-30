@@ -1,8 +1,6 @@
 package com.puzzle.graph.common.adjlist;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  *  Date 30/01/2020
@@ -42,4 +40,20 @@ public class Graph {
         }
     }
 
+    public void bfs(int start) {
+        Queue<Integer> queue=new LinkedList<>();
+        queue.add(start);
+        isVisited[start]=true;
+        while (!queue.isEmpty()){
+            int adj= queue.remove();
+            System.out.print(adj+" ");
+            List<Integer> list=graph.get(adj);
+            for(Integer cur:list){
+                if(!isVisited[cur]){
+                    queue.add(cur);
+                    isVisited[cur]=true;
+                }
+            }
+        }
+    }
 }
