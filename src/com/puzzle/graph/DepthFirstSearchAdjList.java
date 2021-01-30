@@ -2,6 +2,11 @@ package com.puzzle.graph;
 
 import com.puzzle.graph.common.adjlist.Graph;
 
+/**
+ *  Date 30/01/2020
+ *  @author gauravenrich
+ *  DFS Using adj lists
+ */
 public class DepthFirstSearchAdjList {
 
     public static void main(String[] args) {

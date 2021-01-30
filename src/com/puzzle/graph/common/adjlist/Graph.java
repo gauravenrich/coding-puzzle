@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ *  Date 30/01/2020
+ *  @author gauravenrich
+ *  DFS Using adj list
+ */
 public class Graph {
     private List<List<Integer>> graph;
     boolean[] isVisited;
