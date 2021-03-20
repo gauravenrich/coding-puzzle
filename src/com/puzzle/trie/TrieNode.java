@@ -1,5 +1,10 @@
 package com.puzzle.trie;
 
+/**
+ * Date 03/20/2020
+ * @author gauravenrich
+ * Trie Node
+ */
 public class TrieNode {
     TrieNode[] trieNodes=new TrieNode[26];
     boolean isEndOfWord;

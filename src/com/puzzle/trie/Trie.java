@@ -1,5 +1,10 @@
 package com.puzzle.trie;
 
+/**
+ * Date 03/20/2020
+ * @author gauravenrich
+ * Trie Class
+ */
 public class Trie {
     TrieNode root;
 
