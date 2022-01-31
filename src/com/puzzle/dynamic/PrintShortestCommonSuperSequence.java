@@ -11,8 +11,8 @@ package com.puzzle.dynamic;
 
 public class PrintShortestCommonSuperSequence {
     public static void main(String[] args) {
-        String X = "pear";
-        String Y = "peach";
+        String X = "geek";
+        String Y = "eke";
         System.out.println("Shortest Common SuperSequence is "+
         displayShortestCommonSuperSeq(X.toCharArray(), Y.toCharArray(), X.length(), Y.length()));
     }
@@ -57,7 +57,7 @@ public class PrintShortestCommonSuperSequence {
             res[len] = x[i - 1];
             i--;
         }
-        while (i > 0) {
+        while (j > 0) {
             res[len] = y[j - 1];
             j--;
         }

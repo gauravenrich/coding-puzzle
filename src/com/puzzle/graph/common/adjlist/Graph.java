@@ -8,7 +8,7 @@ import java.util.*;
  *  DFS Using adj list
  */
 public class Graph {
-    private List<List<Integer>> graph;
+    private final List<List<Integer>> graph;
     boolean[] isVisited;
 
     public Graph(int nodes) {
@@ -55,5 +55,48 @@ public class Graph {
                 }
             }
         }
+    }
+
+    // A recursive function used by topologicalSort
+    void topologicalSortUtil(int v, boolean[] visited,
+                             Stack<Integer> stack)
+    {
+        // Mark the current node as visited.
+        visited[v] = true;
+        Integer i;
+        
+        for (Integer integer : graph.get(v)) {
+            i = integer;
+            if (!visited[i])
+                topologicalSortUtil(i, visited, stack);
+        }
+
+        // Push current vertex to stack
+        // which stores result
+        stack.push(v);
+    }
+
+    // The function to do Topological Sort.
+    // It uses recursive topologicalSortUtil()
+   public void topologicalSort()
+    {
+        Stack<Integer> stack = new Stack<>();
+
+        // Mark all the vertices as not visited
+
+        for (int i = 0; i < graph.size(); i++)
+            isVisited[i] = false;
+
+        // Call the recursive helper
+        // function to store
+        // Topological Sort starting
+        // from all vertices one by one
+        for (int i = 0; i < graph.size(); i++)
+            if (!isVisited[i])
+                topologicalSortUtil(i, isVisited, stack);
+
+        // Print contents of stack
+        while (!stack.empty())
+            System.out.print(stack.pop() + " ");
     }
 }
