@@ -1,40 +1,24 @@
 package com.puzzle.stackqueue;
 
-import java.util.Scanner;
 import java.util.Stack;
 
 public class QueueUsingStack {
 
     public static void main(String[] args) {
-        //Taking input using class Scanner
-        Scanner sc = new Scanner(System.in);
+        /* Create a queue with items 1 2 3*/
+        StackQueue q = new StackQueue();
+        q.Push(2);
+        q.Push(3);
+        q.Push(4);
+        q.Push(5);
 
-        //Taking input the number of testcases
-        int t = sc.nextInt();
-        while (t > 0) {
-            //Creating a new object of class StackQueue
-            StackQueue g = new StackQueue();
+        /* Dequeue items */
+        System.out.print(q.pop() + " ");
+        System.out.print(q.pop() + " ");
+        System.out.println(q.pop() + " ");
+        System.out.println(q.pop() + " ");
+        System.out.println(q.pop() + " ");
 
-            //Taking input the total number of Queries
-            int q = sc.nextInt();
-            while (q > 0) {
-                int QueryTyoe = sc.nextInt();
-
-                //If QueryTyoe is 1 then
-                //we call the Push method
-                //of class StackQueue
-                //else we call the Pop method
-                if (QueryTyoe == 1) {
-                    int a = sc.nextInt();
-                    g.Push(a);
-                } else if (QueryTyoe == 2)
-                    System.out.print(g.Pop() + " ");
-                q--;
-
-            }
-            System.out.println();
-            t--;
-        }
     }
 }
 
@@ -53,7 +37,7 @@ class StackQueue {
 
 
     //Function to pop an element from queue by using 2 stacks.
-    int Pop() {
+    int pop() {
         // Your code here
         if (!s2.isEmpty()) {
         }

@@ -20,15 +20,7 @@ public class StartOfLoop {
         return temp;
     }
 
-    // A utility function to
-// print a linked list
-    static void printList(Node head) {
-        while (head != null) {
-            System.out.print(head.key + " ");
-            head = head.next;
-        }
-        System.out.println();
-    }
+
 
     // Function to detect and remove loop
 // in a linked list that may contain loop
