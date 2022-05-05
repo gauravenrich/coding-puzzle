@@ -2,9 +2,16 @@ package com.puzzle.greedy;
 
 import java.util.Arrays;
 
+/**
+ * Leetcode 2144. Minimum Cost of Buying Candies With Discount
+ * https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/
+ * Input: cost = [1,2,3]
+ * Output: 5
+ * Explanation: We buy the candies with costs 2 and 3, and take the candy with cost 1 for free.
+ */
 public class DiscountCandies {
     public static void main(String[] args) {
-        int[] cost={6,5,7,9,2,2};
+        int[] cost={1,2,3};
         System.out.println(minimumCost(cost));
     }
 
