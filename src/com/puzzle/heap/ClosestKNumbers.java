@@ -1,20 +1,19 @@
 package com.puzzle.heap;
 
-/**
- *  Date 12/23/2020
- *  @author gauravenrich
- *  Closest K Numbers
- */
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.PriorityQueue;
 
+/**
+ *  Date 12/23/2020
+ *  @author gauravenrich
+ *  Closest K Numbers
+ */
 public class ClosestKNumbers {
 
     public static void main(String[] args){
-        int arr[] = {33, 34, 22, 30, 35, 39, 42,
+        int[] arr = {33, 34, 22, 30, 35, 39, 42,
                 45, 48, 50, 53, 55, 56
         };
         int n = arr.length;

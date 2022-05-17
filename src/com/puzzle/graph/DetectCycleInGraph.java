@@ -20,12 +20,8 @@ class Graph {
             adj.add(new LinkedList<>());
     }
 
-    // This function is a variation of DFSUtil() in
-    // https://www.geeksforgeeks.org/archives/18212
     private boolean isCyclicUtil(int i, boolean[] visited,
-                                 boolean[] recStack)
-    {
-
+                                 boolean[] recStack) {
         // Mark the current node as visited and
         // part of recursion stack
         if (recStack[i])
@@ -33,9 +29,7 @@ class Graph {
 
         if (visited[i])
             return false;
-
         visited[i] = true;
-
         recStack[i] = true;
         List<Integer> children = adj.get(i);
 
@@ -52,10 +46,6 @@ class Graph {
         adj.get(source).add(dest);
     }
 
-    // Returns true if the graph contains a
-    // cycle, else false.
-    // This function is a variation of DFS() in
-    // https://www.geeksforgeeks.org/archives/18212
     private boolean isCyclic()
     {
 
