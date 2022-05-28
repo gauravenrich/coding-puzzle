@@ -8,10 +8,11 @@ import java.util.Arrays;
  * Input: cost = [1,2,3]
  * Output: 5
  * Explanation: We buy the candies with costs 2 and 3, and take the candy with cost 1 for free.
+ * 9 + 7 + 5 + 2 = 23.
  */
 public class DiscountCandies {
     public static void main(String[] args) {
-        int[] cost={1,2,3};
+        int[] cost={6,5,7,9,2,2};
         System.out.println(minimumCost(cost));
     }
 
@@ -20,16 +21,26 @@ public class DiscountCandies {
         int curCost=0;
         int counter=0;
         int total=0;
-        for(int i=cost.length-1;i>=0;i--){
-            curCost+=cost[i];
-            counter++;
-            if(counter==2){
-                i--;
-                counter=0;
-                total+=curCost;
-                curCost=0;
-                continue;
+        int n=cost.length;
+        if(n==1)
+            total=cost[0];
+        else if(n==2){
+            total=cost[0]+cost[1];
+        }else if(n>2){
+            for(int i=n-1;i>=0;i--){
+                curCost+=cost[i];
+                counter++;
+                if(counter==2){
+                    i--;
+                    counter=0;
+                    total+=curCost;
+                    curCost=0;
+                    continue;
+                }
             }
+        }
+        if(counter==1){
+            total+=curCost;
         }
         return total;
     }
