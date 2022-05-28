@@ -31,8 +31,6 @@ public class MirrorTree {
             Node temp=root.left;
             root.left=root.right;
             root.right=temp;
-
-
         }
 
     }
