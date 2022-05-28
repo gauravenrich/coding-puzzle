@@ -7,7 +7,7 @@ package com.puzzle.tree;
  * Identical Tree Program
  */
 
-public class IdenticalTree {
+public class SymmetricTree {
 
     public static void main(String args[]) {
 
