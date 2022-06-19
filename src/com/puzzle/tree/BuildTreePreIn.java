@@ -1,2 +1,4 @@
-package com.puzzle.tree;public class BuildTreePreIn {
+package com.puzzle.tree;
+
+public class BuildTreePreIn {
 }
