@@ -9,12 +9,11 @@ import java.util.Arrays;
  */
 public class NextPermutation {
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4};
+        int[] a = {1,2,3,7,3,4,9,6,5,2,1 };
         NextPermutation obj = new NextPermutation();
         obj.nextPermutation(a);
         System.out.println(Arrays.toString(a));
     }
-
     private void nextPermutation(int[] nums) {
         //find first decreasing digit from right
         int mark = -1;
@@ -24,7 +23,6 @@ public class NextPermutation {
                 break;
             }
         }
-
         if (mark == -1) {
             reverse(nums, 0, nums.length - 1);
             return;
