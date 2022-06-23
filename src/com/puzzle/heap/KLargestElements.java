@@ -1,13 +1,13 @@
 package com.puzzle.heap;
 
-/**
- *  Date 12/23/2020
- *  @author gauravenrich
- *  K Largest Element
- */
-
 import java.util.PriorityQueue;
 
+/**
+ * Date 12/23/2020
+ *
+ * @author gauravenrich
+ * K Largest Element
+ */
 public class KLargestElements {
 
     public static void main(String[] args) {
@@ -20,13 +20,13 @@ public class KLargestElements {
         if (a == null || k > a.length) {
             return;
         }
-        for (int i = 0; i < a.length; i++) {
-            queue.add(a[i]);
+        for (int j : a) {
+            queue.add(j);
             if (queue.size() > k) {
                 queue.poll();
             }
         }
-        Integer num = null;
+        Integer num;
         while ((num = queue.poll()) != null) {
             System.out.println(num);
         }
