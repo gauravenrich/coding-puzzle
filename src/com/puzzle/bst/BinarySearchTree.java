@@ -42,13 +42,4 @@ public class BinarySearchTree {
         inorderRec(root.right);
     }
 
-    static class Node {
-        int key;
-        Node left, right;
-
-        public Node(int item) {
-            key = item;
-            left = right = null;
-        }
-    }
 }
