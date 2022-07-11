@@ -7,6 +7,28 @@ package com.puzzle.array;
  */
 public class MaxProductSubArray {
 
+    public static int maxProduct(int[] nums) {
+        int ans = Integer.MIN_VALUE;
+        int curProd = 1;
+        for(int i = 0; i<nums.length; i++){
+            curProd *= nums[i];
+            ans = Math.max(ans,curProd);
+            if(curProd == 0){
+                curProd = 1; //this means current value is 0 and we cant keep carrying this subarray so prod reinitialized and new subarray will be taken
+            }
+        }
+
+        curProd = 1;
+        for(int i = nums.length-1; i>=0; i--){
+            curProd *= nums[i];
+            ans = Math.max(ans,curProd);
+            if(curProd == 0){
+                curProd = 1;
+            }
+        }
+
+        return ans;
+    }
     // Function to find maximum product subarray
     static int maxProduct(int arr[], int n) {
 
@@ -46,5 +68,7 @@ public class MaxProductSubArray {
 
         System.out.println("Maximum Subarray product is "
                 + maxProduct(arr, n));
+        System.out.println("Maximum Subarray product is "
+                + maxProduct(arr));
     }
 }
