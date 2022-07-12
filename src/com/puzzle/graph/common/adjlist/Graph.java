@@ -3,9 +3,10 @@ package com.puzzle.graph.common.adjlist;
 import java.util.*;
 
 /**
- *  Date 30/01/2020
- *  @author gauravenrich
- *  DFS Using adj list
+ * Date 30/01/2020
+ *
+ * @author gauravenrich
+ * DFS Using adj list
  */
 public class Graph {
     private final List<List<Integer>> graph;
@@ -29,29 +30,30 @@ public class Graph {
         stack.push(start);
         isVisited[start] = true;
         while (!stack.isEmpty()) {
-            Integer node=stack.pop();
-            System.out.print(node+" ");
-            List<Integer> list=graph.get(node);
+            Integer node = stack.pop();
+            System.out.print(node + " ");
+            List<Integer> list = graph.get(node);
             for (Integer cur : list) {
-                if(!isVisited[cur])
-                stack.push(cur);
-                isVisited[cur]=true;
+                if (!isVisited[cur]) {
+                    stack.push(cur);
+                    isVisited[cur] = true;
+                }
             }
         }
     }
 
     public void bfs(int start) {
-        Queue<Integer> queue=new LinkedList<>();
+        Queue<Integer> queue = new LinkedList<>();
         queue.add(start);
-        isVisited[start]=true;
-        while (!queue.isEmpty()){
-            int adj= queue.remove();
-            System.out.print(adj+" ");
-            List<Integer> list=graph.get(adj);
-            for(Integer cur:list){
-                if(!isVisited[cur]){
+        isVisited[start] = true;
+        while (!queue.isEmpty()) {
+            int adj = queue.remove();
+            System.out.print(adj + " ");
+            List<Integer> list = graph.get(adj);
+            for (Integer cur : list) {
+                if (!isVisited[cur]) {
                     queue.add(cur);
-                    isVisited[cur]=true;
+                    isVisited[cur] = true;
                 }
             }
         }
@@ -59,12 +61,11 @@ public class Graph {
 
     // A recursive function used by topologicalSort
     void topologicalSortUtil(int v, boolean[] visited,
-                             Stack<Integer> stack)
-    {
+                             Stack<Integer> stack) {
         // Mark the current node as visited.
         visited[v] = true;
         Integer i;
-        
+
         for (Integer integer : graph.get(v)) {
             i = integer;
             if (!visited[i])
@@ -78,8 +79,7 @@ public class Graph {
 
     // The function to do Topological Sort.
     // It uses recursive topologicalSortUtil()
-   public void topologicalSort()
-    {
+    public void topologicalSort() {
         Stack<Integer> stack = new Stack<>();
 
         // Mark all the vertices as not visited
