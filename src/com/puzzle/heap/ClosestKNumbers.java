@@ -1,9 +1,6 @@
 package com.puzzle.heap;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  *  Date 12/23/2020
@@ -27,7 +24,7 @@ public class ClosestKNumbers {
             hm.put(Math.abs(arr[i]-x),arr[i]);
         }
         PriorityQueue<Map.Entry<Integer,Integer>> queue=new PriorityQueue<>(
-                (a, b) -> Integer.compare(a.getKey(),b.getKey())
+                Comparator.comparingInt(Map.Entry::getKey)
         );
        for(Map.Entry<Integer,Integer> entry: hm.entrySet() ){
            queue.offer(entry);
