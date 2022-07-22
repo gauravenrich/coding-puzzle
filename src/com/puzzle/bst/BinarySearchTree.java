@@ -29,6 +29,14 @@ public class BinarySearchTree {
         return root;
     }
 
+    public Node getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node root) {
+        this.root = root;
+    }
+
     public void inorder() {
         inorderRec(root);
     }
