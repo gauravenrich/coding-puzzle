@@ -1,7 +1,9 @@
 package com.puzzle.array;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 
 // An Interval
 class Interval {
@@ -48,12 +50,30 @@ public class MergeIntervals {
 
     // Driver Code
     public static void main(String[] args) {
-        Interval[] arr = new Interval[4];
+        Interval[] arr = new Interval[5];
         arr[0] = new Interval(6, 8);
         arr[1] = new Interval(1, 9);
         arr[2] = new Interval(2, 4);
         arr[3] = new Interval(4, 7);
-        arr[3] = new Interval(4, 19);
+        arr[4] = new Interval(4, 19);
         mergeIntervals(arr);
+    }
+
+    public int[][] merge(int[][] intervals) {
+        List<int[]> res=new ArrayList<>();
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
+        int l=intervals[0][0];
+        int r=intervals[0][1];
+        for(int i=1;i<intervals.length;i++){
+            if(r>=intervals[i][0]){
+                r=Integer.max(r,intervals[i][1]);
+            }else{
+                res.add(new int[]{l,r});
+                l=intervals[i][0];
+                r=intervals[i][1];
+            }
+        }
+        res.add(new int[]{l,r});
+        return res.toArray(new int[res.size()][]);
     }
 }
