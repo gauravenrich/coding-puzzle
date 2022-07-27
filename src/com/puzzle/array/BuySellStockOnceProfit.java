@@ -1,32 +1,27 @@
 package com.puzzle.array;
 
+/**
+ * @author gsinha
+ * Buy Sell Stock Once Profit
+ * 02/08/21
+ */
 public class BuySellStockOnceProfit {
 
     public static int maxProfitOneTransaction(int[] prices) {
         int n = prices.length;
-        int cost = 0;
+        int cost;
         int maxCost = 0;
-
         if (n == 0) {
             return 0;
         }
-
-        // store the first element of array in a variable
-
         int min_price = prices[0];
+        for (int price : prices) {
+            // now compare first element with all the element of array and find the minimum element
 
-        for (int i = 0; i < n; i++) {
+            min_price = Math.min(min_price, price);
 
-            // now compare first element with all the
-            // element of array and find the minimum element
-
-            min_price = Math.min(min_price, prices[i]);
-
-            // since min_price is smallest element of the
-            // array so subtract with every element of the
-            // array and return the maxCost
-
-            cost = prices[i] - min_price;
+            // since min_price is the smallest element of the array so subtract with every element of the array and return the maxCost
+            cost = price - min_price;
 
             maxCost = Math.max(maxCost, cost);
         }
@@ -36,7 +31,7 @@ public class BuySellStockOnceProfit {
     // Driver Code
     public static void main(String[] args) {
         // stock prices on consecutive days
-        int prices[] = {7, 1, 5, 3, 6, 4};
+        int[] prices = {7, 1, 5, 3, 6, 4};
         System.out.print(maxProfitOneTransaction(prices));
     }
 }
