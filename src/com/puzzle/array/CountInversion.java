@@ -3,13 +3,17 @@ package com.puzzle.array;
 import java.util.Arrays;
 
 /**
- *  Date 08/02/2020
- *  @author gauravenrich
- *  Count Inversion
+ * Date 08/02/2020
+ *
+ * @author gauravenrich
+ * Count Inversion
  */
 public class CountInversion {
-    // Function to count the number of inversions
-    // during the merge process
+    public static void main(String[] args) {
+        int[] arr = {1, 20, 6, 4, 5};
+        System.out.println(
+                mergeSortAndCount(arr, 0, arr.length - 1));
+    }
     private static int mergeAndCount(int[] arr, int l,
                                      int m, int r) {
 
@@ -61,13 +65,5 @@ public class CountInversion {
         }
 
         return count;
-    }
-
-    // Driver code
-    public static void main(String[] args) {
-        int[] arr = {1, 20, 6, 4, 5};
-
-        System.out.println(
-                mergeSortAndCount(arr, 0, arr.length - 1));
     }
 }
