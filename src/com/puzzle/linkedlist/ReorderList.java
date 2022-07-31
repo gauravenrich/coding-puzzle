@@ -1,5 +1,7 @@
 package com.puzzle.linkedlist;
 
+import com.puzzle.common.ListNode;
+
 public class ReorderList {
     public void reorderList(ListNode head) {
         if(head==null){
@@ -16,8 +18,8 @@ public class ReorderList {
         ListNode prev=null;
         ListNode cur=slow;
         while(cur!=null){
-            temp=cur.next;
-            cur.next=prev;
+            temp=cur.getNext();
+            cur.setNext(prev);
             prev=cur;
             cur=temp;
         }

@@ -2,7 +2,7 @@ package com.puzzle.common;
 
 public class ListNode {
     int val;
-    ListNode next;
+    public ListNode next;
 
     public int getVal() {
         return val;
