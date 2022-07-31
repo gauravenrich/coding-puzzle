@@ -1,11 +1,12 @@
-package com.puzzle.linkedlist;
+package com.puzzle.heap;
+
 
 import com.puzzle.common.ListNode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class MergeKSortedArray {
+public class MergeKSortedList {
     public ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<ListNode> pq=new PriorityQueue<>(Comparator.comparingInt(a -> a.getVal()));
         ListNode result=new ListNode();
