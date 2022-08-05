@@ -1,8 +1,12 @@
 package com.puzzle.linkedlist;
 
+/**
+ * @author gsinha
+ * Detect And Remove Loop
+ * 5th aug 2022
+ */
 public class DetectAndRemoveLoop {
-    void detectAndRemoveLoop(Node node)
-    {
+    void detectAndRemoveLoop(Node node) {
 
         // If list is empty or has only one node
         // without loop
@@ -37,7 +41,7 @@ public class DetectAndRemoveLoop {
             }
             /* This case is added if fast and slow pointer meet at first position. */
             else {
-                while(fast.next != slow) {
+                while (fast.next != slow) {
                     fast = fast.next;
                 }
             }

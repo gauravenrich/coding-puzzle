@@ -25,7 +25,7 @@ public class MergeSortedList {
             } else if (l1 == null) {
                 p.next = l2;
                 break;
-            } else if (l2 == null) {
+            } else {
                 p.next = l1;
                 break;
 
