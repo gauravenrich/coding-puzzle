@@ -12,6 +12,10 @@ public class Node {
         right=null;
     }
 
+    public Node() {
+
+    }
+
     public int getData() {
         return data;
     }
