@@ -17,7 +17,7 @@ public class BSTFromPreOrder {
         if (a[0] == preorder.length || preorder[a[0]] > maxValue) {
             return null;
         }
-        Node root = new Node(preorder[a[0]++]);
+        Node root = new Node(preorder[a[0]++]); // a[0] is variable to track the index
         root.left = bstFromPreorder(preorder, root.key, a);
         root.right = bstFromPreorder(preorder, maxValue, a);
         return root;
