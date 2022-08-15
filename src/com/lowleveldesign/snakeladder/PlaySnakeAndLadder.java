@@ -1,4 +1,4 @@
-package com.lld.snakeladder;
+package com.lowleveldesign.snakeladder;
 
 import java.util.*;
 

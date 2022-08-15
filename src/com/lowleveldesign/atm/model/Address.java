@@ -1,4 +1,4 @@
-package com.lld.atm.model;
+package com.lowleveldesign.atm.model;
 
 public class Address {
     private String streetAddress;

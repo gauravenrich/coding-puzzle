@@ -1,4 +1,4 @@
-package com.lld.atm.model.enums;
+package com.lowleveldesign.atm.model.enums;
 
 public enum TransactionStatus {
     SUCCESS, FAILURE, BLOCKED, FULL, PARTIAL, NONE
