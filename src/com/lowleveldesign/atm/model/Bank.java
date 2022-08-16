@@ -1,4 +1,4 @@
-package com.lowleveldesign.atm.service.pojo;
+package com.lowleveldesign.atm.model;
 
 public class Bank {
     private String name;
