@@ -4,6 +4,12 @@ public class ListNode {
     int val;
     public ListNode next;
 
+    public ListNode(int num) {
+        this.val=num;
+    }
+
+    public ListNode(){}
+
     public int getVal() {
         return val;
     }

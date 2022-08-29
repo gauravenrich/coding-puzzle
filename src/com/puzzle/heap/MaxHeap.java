@@ -12,7 +12,7 @@ public class MaxHeap {
         queue.offer(3);
 
 
-        Integer val = null;
+        Integer val;
         while( (val = queue.poll()) != null) {
             System.out.println(val);
         }

@@ -1,6 +1,5 @@
 package com.puzzle.heap;
 
-import java.util.Iterator;
 import java.util.PriorityQueue;
 
 /**
@@ -13,17 +12,17 @@ public class SortKSortedArray {
 
     public static void main(String[] args){
         int k = 3;
-        int arr[] = { 2, 6, 3, 12, 56, 8 };
+        int[] arr = { 2, 6, 3, 12, 56, 8 };
         int n = arr.length;
         kSort(arr, n, k);
         System.out.println("Following is sorted array");
-        printArray(arr, n);
+        printArray(arr);
 
     }
 
-    private static void printArray(int[] arr, int n) {
-        for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
+    private static void printArray(int[] arr) {
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
     }
 
@@ -37,9 +36,8 @@ public class SortKSortedArray {
             arr[index++]=queue.poll();
             queue.add(arr[i]);
         }
-        Iterator<Integer> it=queue.iterator();
-        while(it.hasNext()){
-            arr[index++]=it.next();
+        for (Integer integer : queue) {
+            arr[index++] = integer;
         }
     }
 }
