@@ -7,14 +7,18 @@ package com.puzzle.heap;
  */
 public class HeapSort {
     public static void main(String[] args) {
-        int[] arr = { 12, 11, 13, 5, 6, 7 };
-        int n = arr.length;
+        int[] arr = {12, 11, 13, 5, 6, 7};
 
         HeapSort ob = new HeapSort();
         ob.sort(arr);
 
         System.out.println("Sorted array is");
         printArray(arr);
+    }
+
+    private static void printArray(int[] arr) {
+        for (int j : arr) System.out.print(j + " ");
+        System.out.println();
     }
 
     private void sort(int[] arr) {
@@ -36,14 +40,7 @@ public class HeapSort {
         }
     }
 
-    private static void printArray(int[] arr) {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
-    void heapify(int arr[], int n, int i)
-    {
+    void heapify(int[] arr, int n, int i) {
         int largest = i; // Initialize largest as root
         int l = 2 * i + 1; // left = 2*i + 1
         int r = 2 * i + 2; // right = 2*i + 2
