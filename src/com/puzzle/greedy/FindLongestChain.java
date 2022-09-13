@@ -11,7 +11,7 @@ import java.util.Comparator;
 public class FindLongestChain {
     public static void main(String[] args) {
         FindLongestChain longestChain = new FindLongestChain();
-        int[][] pairs = {{1, 2}, {2, 3}, {3, 4}};
+        int[][] pairs = {{5, 24}, {39, 60}, {15, 28}, {27, 40}, {50, 90}};
         System.out.println(longestChain.findLongestChain(pairs));
     }
 
