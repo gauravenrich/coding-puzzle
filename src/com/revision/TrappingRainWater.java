@@ -1,14 +1,11 @@
 package com.revision;
 
+import java.util.Arrays;
 /**
  *  Date 11/24/2020
  *  @author gauravenrich
  *  Trapping Rainwater Problem
  */
-
-
-import java.util.Arrays;
-
 public class TrappingRainWater {
     
     public static void main(String[] args){
