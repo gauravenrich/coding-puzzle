@@ -1,4 +1,4 @@
-package com.revision;
+package com.mustcode;
 
 /**
  * Leetcode

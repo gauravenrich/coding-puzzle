@@ -16,8 +16,8 @@ public class EqualSumPartition {
 
     private static boolean equalSumPartition(int[] a) {
         int sum = 0;
-        for (int i = 0; i < a.length; i++) {
-            sum += a[i];
+        for (int j : a) {
+            sum += j;
         }
         if(sum%2!=0){
             return false;

@@ -1,4 +1,4 @@
-package com.revision;
+package com.mustcode;
 
 public class CelebrityProblem {
     public static void main(String[] args) {
