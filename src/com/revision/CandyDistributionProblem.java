@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CandyDistributionProblem {
     public static void main(String[] args) {
-        int[] ratings = {1, 0, 2};
+        int[] ratings = {1,7,6,3,3,8};
         System.out.println(candy(ratings));
     }
 
