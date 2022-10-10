@@ -15,9 +15,6 @@ public class CelebrityProblem {
     }
 
     public static int celebrity(int[][] M, int n){
-        // This function returns the celebrity
-        // index 0-based (if any)
-
         int i = 0, j = n - 1;
         while (i < j) {
             if (M[j][i] == 1) // j knows i
