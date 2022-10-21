@@ -4,7 +4,7 @@ package com.puzzle.greedy;
  * Date 09/11/2021
  *
  * @author gauravenrich
- * Consider the following 3 activities sorted by
+ * Consider the following 3 activities sorted
  * by finish time display max number of meetings at a time
  */
 
