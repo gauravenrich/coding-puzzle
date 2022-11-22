@@ -1,7 +1,12 @@
 package com.puzzle.greedy;
 
 /**
- * MaxEqualSumOfThreeStack
+ * Find maximum equal sum of every three stacks
+ *
+ * Given three stacks of the positive numbers, the task is to find the possible equal maximum
+ * sum of the stacks with the removal of top elements allowed.
+ * Stacks are represented as an array, and the first index of the array represent the top element of the stack
+ *
  * @author gsinha
  * 18 july 2022
  */
@@ -20,27 +25,29 @@ public class MaxEqualSumOfThreeStack {
     }
 
     private static int maxStackSum(int[] stack1, int[] stack2, int[] stack3, int n1, int n2, int n3) {
-        int a=0; int b=0;int c=0;
+        int a = 0;
+        int b = 0;
+        int c = 0;
 
-        for(int i: stack1) a+=i;
-        for(int i: stack2) b+=i;
-        for(int i: stack3) c+=i;
+        for (int i : stack1) a += i;
+        for (int i : stack2) b += i;
+        for (int i : stack3) c += i;
 
-        int i=0; int j=0; int k=0;
+        int i = 0;
+        int j = 0;
+        int k = 0;
 
-        while(a!=b || b!=c)
-        {
+        while (a != b || b != c) {
             //System.out.println(a+" "+b+" "+c);
-            if(a>=b && a>=c)
-            {
-                a-=stack1[i]; i++;
-            }
-            else if(b>=c)
-            {
-                b-=stack2[j]; j++;
-            }
-            else {
-                c-=stack3[k]; k++;
+            if (a >= b && a >= c) {
+                a -= stack1[i];
+                i++;
+            } else if (b >= c) {
+                b -= stack2[j];
+                j++;
+            } else {
+                c -= stack3[k];
+                k++;
             }
         }
 
