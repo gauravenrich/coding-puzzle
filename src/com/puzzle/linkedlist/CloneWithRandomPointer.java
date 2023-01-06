@@ -20,7 +20,7 @@ public class CloneWithRandomPointer {
     }
 
     static Node clone(Node start) {
-        Node curr = start, temp = null;
+        Node curr = start, temp;
 
         // insert additional node after
         // every node of original list
@@ -40,7 +40,7 @@ public class CloneWithRandomPointer {
             if (curr.next != null)
                 curr.next.random = (curr.random != null)
                         ? curr.random.next
-                        : curr.random;
+                        : null;
 
             // move to the next newly added node by
             // skipping an original node
@@ -57,7 +57,7 @@ public class CloneWithRandomPointer {
             original.next = original.next.next;
 
             copy.next = (copy.next != null) ? copy.next.next
-                    : copy.next;
+                    : null;
             original = original.next;
             copy = copy.next;
         }

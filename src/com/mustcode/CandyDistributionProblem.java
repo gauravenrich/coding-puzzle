@@ -1,7 +1,9 @@
 package com.mustcode;
 
 import java.util.Arrays;
-
+/**
+ * Leetcode https://leetcode.com/problems/candy/solution/
+ */
 public class CandyDistributionProblem {
     public static void main(String[] args) {
         int[] ratings = {1,7,6,3,3,8};

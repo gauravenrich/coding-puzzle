@@ -9,18 +9,10 @@ package com.puzzle.array;
 
 public class MaxAndMinElement {
 
-    static class Pair {
-
-        int min;
-        int max;
-    }
-
-    static Pair getMinMax(int arr[], int n) {
+    static Pair getMinMax(int[] arr, int n) {
         Pair minMax = new Pair();
         int i;
-        /* If array has even number of elements then
-    initialize the first two elements as minimum and
-    maximum */
+        /* If array has even numbers of elements then initialize the first two elements as minimum and maximum */
         if (n % 2 == 0) {
             if (arr[0] > arr[1]) {
                 minMax.max = arr[0];
@@ -67,12 +59,18 @@ public class MaxAndMinElement {
     }
 
     /* Driver program to test above function */
-    public static void main(String args[]) {
-        int arr[] = {1000, 11, 445, 1, 330, 3000};
+    public static void main(String[] args) {
+        int[] arr = {1000, 11, 445, 1, 330, 3000};
         int arr_size = 6;
         Pair minMax = getMinMax(arr, arr_size);
         System.out.printf("\nMinimum element is %d", minMax.min);
         System.out.printf("\nMaximum element is %d", minMax.max);
 
+    }
+
+    static class Pair {
+
+        int min;
+        int max;
     }
 }

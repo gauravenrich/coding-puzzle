@@ -1,55 +1,34 @@
 package com.java8;
 
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-
-class Job1 {
-    int id;
-    int profit;
-    int deadline;
-
-    public Job1(int id, int deadline, int profit) {
-        this.id = id;
-        this.profit = profit;
-        this.deadline = deadline;
-    }
-}
+import java.util.Arrays;
 
 public class Practice {
-    public static void main(String[] args) {
-        List<Job1> jobList = new ArrayList<>();
-        int n = 4;
-        jobList.add(new Job1(1, 4, 20));
-        jobList.add(new Job1(2, 1, 10));
-        jobList.add(new Job1(3, 1, 40));
-        jobList.add(new Job1(4, 1, 30));
-        int[] result = jobScheduling(jobList, n);
-        System.out.println(result[0] + " " + result[1]);
+    public static void main(String[] args){
+        int[] price = {10, 22, 5, 75, 65, 80};
+        int n = price.length;
+        System.out.println("Maximum Profit = " + maxProfit(price, n));
     }
 
-    private static int[] jobScheduling(List<Job1> jobList, int n) {
-        int[] result=new int[2];
-        int totalJob=0;
-        int totalProfit=0;
-        Comparator<Job1> comparator=Comparator.comparing(j->j.profit);
-        jobList.sort(comparator.reversed());
-        boolean[] slots=new boolean[n];
-        for(Job1 job:jobList){
-            for(int i=Integer.min(n-1, job.deadline-1);i>=0;i--){
-                if(!slots[i]){
-                    slots[i]=true;
-                    totalJob++;
-                    totalProfit+=job.profit;
-                    break;
-                }
-            }
+    private static int maxProfit(int[] price, int n) {
+        int[] profit=new int[n];
+        Arrays.fill(profit,0);
+        int maxPrice=price[n-1];
+        for(int i=n-2;i>=0;i--){
+          if(price[i]>maxPrice){
+              maxPrice=price[i];
+          }
+          profit[i]=Integer.max(maxPrice-price[i],profit[i+1]);
+
         }
-        result[0]=totalProfit;
-        result[1]=totalJob;
-        return result;
+        System.out.println(Arrays.toString(profit));
+        int minPrice=price[0];
+        for(int i=1;i<n;i++){
+            if(price[i]<minPrice){
+                minPrice=price[i];
+            }
+            profit[i]=Integer.max(profit[i-1],price[i]-minPrice+profit[i]);
+        }
+        return profit[n-1];
     }
-
 
 }
