@@ -14,5 +14,6 @@ public class CountCharacter {
            long count=str.chars().filter(a->a==c).count();
             System.out.println(c+" occurs "+count+" times");
         }
+
     }
 }
